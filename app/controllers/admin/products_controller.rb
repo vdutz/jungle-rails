@@ -1,4 +1,4 @@
-class Admin::ProductsController < ApplicationController
+class Admin::ProductsController < Admin::BaseController
 
   http_basic_authenticate_with name: "Jungle", password: "book"
 
