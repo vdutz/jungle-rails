@@ -1,0 +1,27 @@
+<% quantity = l_item['quantity'].to_i %>
+<% product_id = l_item['product_id'] %>
+
+<% if product = Product.find_by(id: product_id) %>
+  <!-- <% item_total = product.price * quantity %> -->
+  <% @order_total += l_item['total_price_cents'] %>
+
+  <tr>
+    <td>
+      <%= image_tag product.image.tiny %>
+    </td>
+    <td>
+      <h4><%= product.name %></h4>
+      <br>
+      <p><%= product.description %></p>
+    </td>
+    <td>
+      <%= product.price %>
+    </td>
+    <td>
+      <%= quantity %>
+    </td>
+    <td>
+      <%= l_item['total_price_cents'].to_f/100 %>
+    </td>
+  </tr>
+<% end %>
