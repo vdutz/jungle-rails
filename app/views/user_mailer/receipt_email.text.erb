@@ -1,0 +1,17 @@
+Hello and thank you for your purchase!
+===============================================
+
+Your order details are as follows:
+
+Product - Unit Price - Quantity - Price
+
+<% @order_total = 0 %>
+<% @order.line_items.each do |l_item| %>
+  <% product_id = l_item['product_id'] %>
+  <% product = Product.find_by(id: product_id) %>
+  <% @order_total += l_item.total_price_cents %>
+  <%= product.name %> - <%= l_item.quantity %> - <%= l_item.item_price_cents.to_f/100 %> - <%= l_item.total_price_cents.to_f/100 %>
+<% end %>
+
+Have a great day!
+The Jungle Team

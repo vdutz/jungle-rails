@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>Hello and thank you for your purchase! </p>
+    <p>
+      Your order details are as follows:
+     </p>
+     <table>
+      <thead>
+        <tr>
+          <th colspan="1">Product</th>
+          <th>Unit Price</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <% @order_total = 0 %>
+      <% @order.line_items.each do |l_item| %>
+        <% product_id = l_item['product_id'] %>
+        <% product = Product.find_by(id: product_id) %>
+        <% @order_total += l_item.total_price_cents %>
+        <tbody>
+          <tr>
+            <th><%= product.name %></th>
+            <th><%= l_item.quantity %></th>
+            <th><%= l_item.item_price_cents.to_f/100 %></th>
+            <th><%= l_item.total_price_cents.to_f/100 %></th>
+          </tr>
+        </tbody>
+      <% end %>
+      <tfoot>
+        <tr>
+          <th colspan="3">
+            TOTAL:
+          </th>
+          <th>
+            <%= @order_total.to_f/100 %>
+          </th>
+        </tr>
+      </tfoot>
+    </table>
+    <p>Have a great day!</p>
+    <p>The Jungle Team</p>
+  </body>
+</html>
