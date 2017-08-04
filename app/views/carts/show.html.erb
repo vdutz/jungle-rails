@@ -1,3 +1,17 @@
+<% if cart == {} %>
+
+<section class="cart-show">
+
+  <header class="page-header">
+    <h1>My Cart</h1>
+  </header>
+  <div class="empty-cart-notice">
+    <p>Your cart is empty.</p>
+  </div>
+  <p>Return to the <%= link_to 'Homepage', root_path %> to continue browsing products.</p>
+
+<% else %>
+
 <section class="cart-show">
 
   <header class="page-header">
@@ -51,3 +65,5 @@
   </div>
 
 </section>
+
+<% end %>
