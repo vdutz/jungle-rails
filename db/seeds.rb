@@ -132,5 +132,107 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+## USERS
+
+puts "Re-creating Users ..."
+
+User.destroy_all
+
+User.create!({
+  name:  'Test',
+  email: 'test@test.com',
+  password: "test",
+  password_confirmation: "test"
+})
+
+User.create!({
+  name:  'Jane',
+  email: 'jane@doe.com',
+  password: "jane",
+  password_confirmation: "jane"
+})
+
+User.create!({
+  name:  'John',
+  email: 'john@doe.com',
+  password: "john",
+  password_confirmation: "john"
+})
+
+User.create!({
+  name:  'Nicholas Cage',
+  email: 'nick@cage.com',
+  password: "nick",
+  password_confirmation: "nick"
+})
+
+## REVIEWS
+
+puts "Re-creating Reviews ..."
+
+Review.destroy_all
+
+Review.create!({
+  product_id:  '1',
+  user_id: '1',
+  description: 'Great product!',
+  rating: 5
+})
+
+Review.create!({
+  product_id:  '1',
+  user_id: '2',
+  description: 'Works okay',
+  rating: 2
+})
+
+Review.create!({
+  product_id:  '2',
+  user_id: '2',
+  description: 'As advertised',
+  rating: 3
+})
+
+Review.create!({
+  product_id:  '3',
+  user_id: '3',
+  description: 'Pretty good for the price',
+  rating: 4
+})
+
+Review.create!({
+  product_id:  '3',
+  user_id: '4',
+  description: 'I love it!',
+  rating: 5
+})
+
+Review.create!({
+  product_id:  '4',
+  user_id: '2',
+  description: 'Fell apart after 2 months.',
+  rating: 1
+})
+
+Review.create!({
+  product_id:  '5',
+  user_id: '1',
+  description: 'Terrible product. Do not buy.',
+  rating: 1
+})
+
+Review.create!({
+  product_id:  '5',
+  user_id: '4',
+  description: 'Definitely a ripoff.',
+  rating: 2
+})
+
+Review.create!({
+  product_id:  '6',
+  user_id: '1',
+  description: 'I use it everyday.',
+  rating: 4
+})
 
 puts "DONE!"
