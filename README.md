@@ -6,35 +6,35 @@ A mini e-commerce application built with Ruby on Rails 4.2.
 
 ### Homepage
 
-!["Homepage View"](#)
+!["Homepage View"](https://github.com/vdutz/jungle-rails/blob/master/docs/homepage2.png?raw=true)
 
 ### Product Details Page
 
-!["Product Details Page"](#)
+!["Product Details Page"](https://github.com/vdutz/jungle-rails/blob/master/docs/product-detail-view.png?raw=true)
 
 ### Product Reviews
 
-!["Product Reviews"](#)
+!["Product Reviews"](https://github.com/vdutz/jungle-rails/blob/master/docs/reviews-section.png?raw=true)
 
 ### My Cart Page
 
-!["My Cart Page"](#)
+!["My Cart Page"](https://github.com/vdutz/jungle-rails/blob/master/docs/my-cart-view.png?raw=true)
 
 ### Visa Payment
 
-!["Visa Payment View"](#)
+!["Visa Payment View"](https://github.com/vdutz/jungle-rails/blob/master/docs/visa-payment-view.png?raw=true)
 
 ### Order Confirmation Page
 
-!["Order Confirmation Page"](#)
+!["Order Confirmation Page"](https://github.com/vdutz/jungle-rails/blob/master/docs/order-confirmation-page.png?raw=true)
 
 ### Order Email Receipt
 
-!["Order Email Receipt"](#)
+!["Order Email Receipt"](https://github.com/vdutz/jungle-rails/blob/master/docs/order-email-receipt-simulation.png?raw=true)
 
 ### Admin Products Page
 
-!["Admin Products Page"](#)
+!["Admin Products Page"](https://github.com/vdutz/jungle-rails/blob/master/docs/admin-products-page.png?raw=true)
 
 
 ## Setup
