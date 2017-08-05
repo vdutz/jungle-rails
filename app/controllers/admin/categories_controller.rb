@@ -18,12 +18,6 @@ class Admin::CategoriesController < Admin::BaseController
     end
   end
 
-  # def destroy
-  #   @product = Product.find params[:id]
-  #   @product.destroy
-  #   redirect_to [:admin, :products], notice: 'Product deleted!'
-  # end
-
   private
 
     def category_params

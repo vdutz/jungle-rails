@@ -139,10 +139,10 @@ puts "Re-creating Users ..."
 User.destroy_all
 
 User.create!({
-  name:  'Test',
-  email: 'test@test.com',
-  password: "test",
-  password_confirmation: "test"
+  name:  'Harry Potter',
+  email: 'harry@potter.com',
+  password: "harry",
+  password_confirmation: "harry"
 })
 
 User.create!({
@@ -173,63 +173,63 @@ puts "Re-creating Reviews ..."
 Review.destroy_all
 
 Review.create!({
-  product_id:  '1',
+  product_id:  '2',
   user_id: '1',
   description: 'Great product!',
   rating: 5
 })
 
 Review.create!({
-  product_id:  '1',
+  product_id:  '2',
   user_id: '2',
   description: 'Works okay',
   rating: 2
 })
 
 Review.create!({
-  product_id:  '2',
+  product_id:  '4',
   user_id: '2',
   description: 'As advertised',
   rating: 3
 })
 
 Review.create!({
-  product_id:  '3',
+  product_id:  '6',
   user_id: '3',
   description: 'Pretty good for the price',
   rating: 4
 })
 
 Review.create!({
-  product_id:  '3',
+  product_id:  '6',
   user_id: '4',
   description: 'I love it!',
   rating: 5
 })
 
 Review.create!({
-  product_id:  '4',
+  product_id:  '8',
   user_id: '2',
   description: 'Fell apart after 2 months.',
   rating: 1
 })
 
 Review.create!({
-  product_id:  '5',
+  product_id:  '10',
   user_id: '1',
   description: 'Terrible product. Do not buy.',
   rating: 1
 })
 
 Review.create!({
-  product_id:  '5',
+  product_id:  '10',
   user_id: '4',
   description: 'Definitely a ripoff.',
   rating: 2
 })
 
 Review.create!({
-  product_id:  '6',
+  product_id:  '12',
   user_id: '1',
   description: 'I use it everyday.',
   rating: 4

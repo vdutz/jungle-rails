@@ -8,7 +8,7 @@
   <div class="empty-cart-notice">
     <p>Your cart is empty.</p>
   </div>
-  <p>Return to the <%= link_to 'Homepage', root_path %> to continue browsing products.</p>
+  <p>Return to the <%= link_to 'homepage', root_path %> to continue browsing products.</p>
 
 <% else %>
 
@@ -49,15 +49,22 @@
 
   <div class="row">
     <div class="col-xs-12">
+      <% if !current_user %>
+        <% name = "Guest" %>
+        <% email = "No email available" %>
+      <% else %>
+        <% name = current_user.name %>
+        <% email = current_user.email %>
+      <% end %>
       <%= form_tag orders_path do %>
         <script
           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-amount="<%= @cart_total * 100 %>"
           data-name="Jungle"
-          data-description="<%= current_user.name%>'s Jungle Order"
+          data-description="<%= name%>'s Jungle Order"
           data-locale="auto"
-          data-email="<%= current_user.email %>"
+          data-email="<%= email %>"
           data-currency="cad">
         </script>
       <% end %>

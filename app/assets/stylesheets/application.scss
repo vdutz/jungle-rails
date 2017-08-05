@@ -6,13 +6,10 @@
 // App
 @import "products";
 @import "reviews";
+@import "categories";
+@import "login-logout";
 
 // Global
 body {
   padding-top: 70px;
-}
-
-.login-logout {
-  margin: 10px 0 0 30px;
-  /*border: 3px solid black;*/
 }

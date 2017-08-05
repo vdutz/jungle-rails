@@ -2,6 +2,18 @@
 
 <%= form_for :user, url: users_path do |f| %>
 
+  <% if @user && @user.errors.any? %>
+    <p>This is a test paragraph.</p>
+    <div class="alert alert-danger">
+      <strong>The following errors prevented saving:</strong>
+      <ul>
+        <% @user.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name, class: 'form-control' %>
@@ -19,11 +31,5 @@
     <%= f.password_field :password_confirmation, class: 'form-control' %>
   </div>
   <%= f.submit 'Submit', class: 'btn btn-primary' %>
-
-<!--   Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %> -->
 
 <% end %>

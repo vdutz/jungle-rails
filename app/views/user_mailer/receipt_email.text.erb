@@ -12,6 +12,7 @@ Product - Unit Price - Quantity - Price
   <% @order_total += l_item.total_price_cents %>
   <%= product.name %> - <%= l_item.quantity %> - <%= l_item.item_price_cents.to_f/100 %> - <%= l_item.total_price_cents.to_f/100 %>
 <% end %>
+  TOTAL: <%= @order_total.to_f/100 %>
 
 Have a great day!
 The Jungle Team

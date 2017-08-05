@@ -2,7 +2,6 @@
 <% product_id = l_item['product_id'] %>
 
 <% if product = Product.find_by(id: product_id) %>
-  <!-- <% item_total = product.price * quantity %> -->
   <% @order_total += l_item['total_price_cents'] %>
 
   <tr>
