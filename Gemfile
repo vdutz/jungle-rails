@@ -62,4 +62,7 @@ group :production do
   gem 'newrelic_rpm'
   gem 'rails_12factor'
   gem 'pg'
+
+  # Letter opener lets you browse/view sent emails
+  gem 'letter_opener_web'
 end
