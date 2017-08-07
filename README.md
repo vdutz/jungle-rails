@@ -2,6 +2,10 @@
 
 A mini e-commerce application built with Ruby on Rails 4.2.
 
+## View on Heroku
+
+[Click here to view the Jungle web app on Heroku](https://jungle-web-app.herokuapp.com/)
+
 ## Final Product
 
 ### Homepage
@@ -35,10 +39,6 @@ A mini e-commerce application built with Ruby on Rails 4.2.
 ### Admin Products Page
 
 !["Admin Products Page"](https://github.com/vdutz/jungle-rails/blob/master/docs/admin-products-page.png?raw=true)
-
-## View on Heroku
-
-[Click here to view the Jungle web app on Heroku](http://guides.rubyonrails.org/v4.2/)
 
 ## Setup
 
