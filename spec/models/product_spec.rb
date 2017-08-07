@@ -48,7 +48,6 @@ RSpec.describe Product, type: :model do
   end
 end
 
-
 # create_table "products", force: :cascade do |t|
 #   t.string   "name"
 #   t.text     "description"
