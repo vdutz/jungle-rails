@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  # if Rails.env.development?
+  if Rails.env.development? || Rails.env.production?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
-  # end
+  end
 
   root to: 'products#index'
 

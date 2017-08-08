@@ -29,6 +29,9 @@
         </tr>
       </thead>
       <tbody>
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, class: "alert alert-info" %>
+        <% end %>
         <% @cart_total = 0 %>
         <% cart.each do |product_id, details| %>
           <%= render 'item', product_id: product_id, details: details %>
