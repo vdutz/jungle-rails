@@ -13,7 +13,7 @@ class CartsController < ApplicationController
     item = cart[product_id] || { "quantity" => 0 }
 
     if product.quantity == item["quantity"]
-      flash[:notice] = "Not enough quantity in stock to increase order quantity"
+      flash[:notice] = "Not enough quantity in stock to increase order quantity for that product"
       redirect_to :back
     else
       item["quantity"] += 1

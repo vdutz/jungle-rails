@@ -66,3 +66,10 @@ group :production do
   # Letter opener lets you browse/view sent emails
   gem 'letter_opener_web'
 end
+
+group :test do
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
+end
+
