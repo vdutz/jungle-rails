@@ -1,7 +1,9 @@
 <h1>Login</h1>
 
 <%= form_tag sessions_path do %>
-
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, class: "alert alert-info" %>
+  <% end %>
   <div class="form-group">
     <%= label_tag :email %>
     <%= text_field_tag :email, "", class: 'form-control' %>
